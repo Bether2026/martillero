@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ignacio Ferrán — Martillero y Corredor Público | Zona Sur</title>
+<meta name="description" content="Remates judiciales y particulares, compraventa, alquileres y tasaciones en Zona Sur. Sitio de demostración realizado por Bether Studio.">
+<meta property="og:title" content="Ignacio Ferrán — Martillero y Corredor Público">
+<meta property="og:description" content="Remates, compraventa y tasaciones con respaldo profesional.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1757524492552-d47a66a2b63e?w=1200&q=70&auto=format&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Lunes a viernes · 9 a 18 h</span>
+    <span>Lomas de Zamora · Banfield · Temperley · Adrogué</span>
+    <a href="#" data-wa="Hola Ignacio, quería hacerle una consulta.">WhatsApp directo →</a>
+  </div>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Ignacio Ferrán, martillero">
+      <span class="mono">IF</span>
+      <span class="brand__txt"><b>Ignacio Ferrán</b><small>Martillero y Corredor Público · Mat. N.º 4127</small></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#remates">Remates</a>
+      <a href="#propiedades">Propiedades</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#tasacion" class="btn btn--brass">Pedir tasación</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero__img" src="https://images.unsplash.com/photo-1757524492552-d47a66a2b63e?w=1800&q=72&auto=format&fit=crop" alt="Casa moderna con grandes ventanales al atardecer">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="kicker">Remates · Compraventa · Tasaciones</span>
+      <h1>Su propiedad,<br>en las manos <em>correctas.</em></h1>
+      <p>Más de veinte años rematando, vendiendo y tasando en Zona Sur. Trato personal, información clara y cada paso respaldado por la ley.</p>
+      <div class="hero__ctas">
+        <a href="#remates" class="btn btn--brass">Ver próximos remates</a>
+        <a href="#tasacion" class="btn btn--line">Tasación sin cargo</a>
+      </div>
+    </div>
+    <aside class="next" aria-label="Próximo remate">
+      <div class="next__top"><span class="dot"></span>Próximo remate</div>
+      <h2>Casa 4 ambientes con parque</h2>
+      <p class="next__where">Banfield Oeste · Remate judicial</p>
+      <div class="count" data-countdown="9">
+        <div><b>--</b><small>días</small></div><div><b>--</b><small>horas</small></div><div><b>--</b><small>min</small></div><div><b>--</b><small>seg</small></div>
+      </div>
+      <div class="next__row"><span>Base</span><b>USD 98.000</b></div>
+      <div class="next__row"><span>Exhibición</span><b>Sábado 10 a 12 h</b></div>
+      <button class="btn btn--navy btn--full" data-lote="0">Ver condiciones</button>
+    </aside>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div><b data-count="22">22</b><span>años de trayectoria</span></div>
+    <div><b data-count="850" data-plus>+850</b><span>operaciones cerradas</span></div>
+    <div><b data-count="310" data-plus>+310</b><span>remates realizados</span></div>
+    <div><b>Perito</b><span>tasador judicial</span></div>
+  </div>
+</section>
+
+<section class="sec" id="remates">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="kicker">Agenda</span>
+      <h2>Próximos <em>remates</em></h2>
+      <p>Todas las subastas son públicas. Podés visitar cada propiedad en el horario de exhibición y consultarme las condiciones antes de ofertar.</p>
+    </div>
+    <div class="lots" id="lots"></div>
+  </div>
+</section>
+
+<section class="sec sec--ivory" id="propiedades">
+  <div class="wrap">
+    <div class="sec__head sec__head--row rv">
+      <div>
+        <span class="kicker">Cartera</span>
+        <h2>Propiedades <em>disponibles</em></h2>
+      </div>
+      <div class="filters" id="filters">
+        <button class="on" data-op="todas">Todas</button>
+        <button data-op="venta">Venta</button>
+        <button data-op="alquiler">Alquiler</button>
+        <select id="tipo" aria-label="Tipo de propiedad">
+          <option value="">Todo tipo</option><option>Casa</option><option>Departamento</option><option>Local / Oficina</option>
+        </select>
+      </div>
+    </div>
+    <div class="props" id="props"></div>
+    <p class="empty" id="empty" hidden>No hay propiedades con ese filtro. <a href="#tasacion">Contame qué buscás →</a></p>
+  </div>
+</section>
+
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="kicker">Servicios</span>
+      <h2>Todo lo que necesita <em>su propiedad</em></h2>
+    </div>
+    <div class="svcs">
+      <article class="svc rv"><svg viewBox="0 0 48 48"><path d="M10 38h22M14 30l12-12M20 12l10 10M24 8l12 12M30 26l12 12"/></svg><h3>Remates judiciales</h3><p>Designado por juzgados civiles y comerciales. Edictos, exhibición, subasta y rendición de cuentas.</p></article>
+      <article class="svc rv"><svg viewBox="0 0 48 48"><path d="M8 20 24 8l16 12v20H8z"/><path d="M19 40V28h10v12"/></svg><h3>Remates particulares</h3><p>Una alternativa ágil para vender a precio de mercado, con fecha cierta y competencia real entre compradores.</p></article>
+      <article class="svc rv"><svg viewBox="0 0 48 48"><path d="M6 24h36M24 6v36"/><circle cx="24" cy="24" r="16"/></svg><h3>Compraventa</h3><p>Publicación, visitas, negociación y acompañamiento hasta la escritura. Usted solo firma.</p></article>
+      <article class="svc rv"><svg viewBox="0 0 48 48"><rect x="10" y="8" width="28" height="32" rx="2"/><path d="M16 16h16M16 23h16M16 30h10"/></svg><h3>Alquileres</h3><p>Búsqueda de inquilinos, contratos, garantías y administración mensual.</p></article>
+      <article class="svc rv"><svg viewBox="0 0 48 48"><path d="M8 38 20 24l8 8 12-16"/><path d="M32 16h8v8"/></svg><h3>Tasaciones</h3><p>Informes de valor para venta, sucesiones, divorcios o presentaciones judiciales. Sin cargo para comercializar.</p></article>
+      <article class="svc rv"><svg viewBox="0 0 48 48"><circle cx="17" cy="18" r="6"/><circle cx="31" cy="18" r="6"/><path d="M6 40c1-7 6-11 11-11s10 4 11 11M28 29c5 0 10 4 11 11"/></svg><h3>Sucesiones y condominios</h3><p>Soluciones para herederos y copropietarios que necesitan vender o dividir un bien.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--navy" id="como-funciona">
+  <div class="wrap">
+    <div class="sec__head rv">
+      <span class="kicker">Paso a paso</span>
+      <h2>Cómo funciona <em>un remate</em></h2>
+      <p>Muchos lo imaginan complicado. En realidad es uno de los caminos más transparentes para vender.</p>
+    </div>
+    <ol class="timeline">
+      <li class="rv"><span>01</span><h3>Tasación y base</h3><p>Analizamos la propiedad y el mercado para fijar una base atractiva y realista.</p></li>
+      <li class="rv"><span>02</span><h3>Publicación</h3><p>Edictos, portales, cartelería y difusión en redes para llegar a la mayor cantidad de compradores.</p></li>
+      <li class="rv"><span>03</span><h3>Exhibición</h3><p>Visitas abiertas en días y horarios fijos. Los interesados conocen el inmueble y sus condiciones.</p></li>
+      <li class="rv"><span>04</span><h3>Subasta</h3><p>Se puja en voz alta y gana la mejor oferta. Seña en el acto y saldo según las condiciones del remate.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="sobre-mi">
+  <div class="wrap about">
+    <div class="about__img rv">
+      <img src="https://images.unsplash.com/photo-1767972159871-b9f5d320be2b?w=900&q=72&auto=format&fit=crop" alt="Martillo de remate sobre un libro" loading="lazy">
+      <div class="about__badge"><b>22</b><span>años<br>de oficio</span></div>
+    </div>
+    <div class="about__txt rv">
+      <span class="kicker">Sobre mí</span>
+      <h2>Un oficio que se ejerce <em>con la palabra.</em></h2>
+      <p>Empecé acompañando a mi padre en los remates de los sábados, cuando la subasta se anunciaba con un cartel en la vereda. Hoy uso otras herramientas, pero el principio es el mismo: decir la verdad sobre cada propiedad y cuidar el patrimonio de quien me la confía.</p>
+      <ul class="creds">
+        <li>Martillero y Corredor Público matriculado</li>
+        <li>Perito tasador en el fuero civil y comercial</li>
+        <li>Especialista en sucesiones y divisiones de condominio</li>
+      </ul>
+      <span class="firma">Ignacio Ferrán</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--ivory" id="opiniones">
+  <div class="wrap">
+    <div class="sec__head rv"><span class="kicker">Opiniones</span><h2>Lo que dicen <em>mis clientes</em></h2></div>
+    <div class="quotes">
+      <blockquote class="rv"><p>"Heredamos la casa de mis viejos entre cuatro hermanos y no nos poníamos de acuerdo. Ignacio nos explicó todo con paciencia y en dos meses estaba vendida."</p><cite>Laura M. · Temperley</cite></blockquote>
+      <blockquote class="rv"><p>"Compré en un remate por primera vez. Me acompañó desde la exhibición hasta la escritura y nunca me sentí perdido."</p><cite>Diego R. · Banfield</cite></blockquote>
+      <blockquote class="rv"><p>"La tasación fue precisa y el informe sirvió para la sucesión sin una sola observación del juzgado."</p><cite>Estudio C&amp;A · Lomas de Zamora</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--navy" id="tasacion">
+  <div class="wrap tas">
+    <div class="rv">
+      <span class="kicker">Tasación sin cargo</span>
+      <h2>¿Cuánto vale <em>su propiedad?</em></h2>
+      <p>Complete estos datos y lo contacto para coordinar la visita. La tasación para comercializar no tiene costo.</p>
+      <ul class="tas__list">
+        <li>Respuesta dentro de las 24 h hábiles</li>
+        <li>Visita y evaluación en el día que usted elija</li>
+        <li>Informe escrito con fundamentos de mercado</li>
+      </ul>
+    </div>
+    <form class="form rv" id="form">
+      <div class="form__row">
+        <label>Operación<select name="op"><option>Vender</option><option>Rematar</option><option>Alquilar</option><option>Tasación para sucesión</option></select></label>
+        <label>Tipo<select name="tipo"><option>Casa</option><option>Departamento</option><option>PH</option><option>Local / Oficina</option><option>Terreno</option></select></label>
+      </div>
+      <div class="form__row">
+        <label>Localidad<input name="loc" required placeholder="Ej: Adrogué"></label>
+        <label>Ambientes<input name="amb" type="number" min="1" max="20" placeholder="Ej: 3"></label>
+      </div>
+      <div class="form__row">
+        <label>Su nombre<input name="nombre" required placeholder="Nombre y apellido"></label>
+        <label>Teléfono<input name="tel" required inputmode="tel" placeholder="Ej: 11 5555-5555"></label>
+      </div>
+      <button class="btn btn--brass btn--full" type="submit">Solicitar tasación</button>
+      <small>Se abre WhatsApp con su consulta lista para enviar.</small>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="brand"><span class="mono">IF</span><span class="brand__txt"><b>Ignacio Ferrán</b><small>Martillero y Corredor Público</small></span></div>
+    <p>Av. Hipólito Yrigoyen 0000, Lomas de Zamora · Lun a vie 9–18 h</p>
+    <p class="demo">Sitio de demostración. El nombre, la matrícula, las propiedades, los remates y las opiniones son ficticios. Diseño y desarrollo: <a href="https://bether-studio.com/" target="_blank" rel="noopener">Bether Studio</a>.</p>
+  </div>
+</footer>
+
+<a href="#" class="wa" data-wa="Hola Ignacio, quería hacerle una consulta." aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3 4.8 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 22a10 10 0 0 1-5.2-1.5L3 22l1.5-3.7A10 10 0 1 1 12 22Z"/></svg>
+</a>
+
+<dialog class="modal" id="modal">
+  <button class="modal__x" id="modalX" aria-label="Cerrar">✕</button>
+  <div id="modalBody"></div>
+</dialog>
+
+<script src="js/app.js"></script>
+</body>
+</html>
