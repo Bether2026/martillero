@@ -236,7 +236,7 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--brass)}
 /* Aparición al hacer scroll */
 .js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv,.js .hero__copy>*,.js .next{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv,.js .hero__copy>*,.js .next,.js .lines .ln>span{opacity:1;transform:none}.js .reveal-img{clip-path:none}.js .reveal-img img{transform:none}}
 
 /* Responsive */
 @media (max-width:1020px){
